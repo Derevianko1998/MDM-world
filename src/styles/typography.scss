@@ -1,0 +1,170 @@
+@use 'variables' as *;
+
+// ─── Base ────────────────────────────────────────────────────
+
+body {
+  font-family: $font-primary;
+  font-size: $text-base;
+  font-weight: $weight-regular;
+  line-height: $leading-relaxed;
+  color: $color-text-primary;
+}
+
+// ─── Headings ────────────────────────────────────────────────
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: $weight-bold;
+  line-height: $leading-tight;
+  color: $color-text-primary;
+}
+
+h1 {
+  font-size: $text-5xl;
+
+  @include respond-to($tablet) {
+    font-size: $text-4xl;
+  }
+
+  @include respond-to($mobile) {
+    font-size: $text-2xl;
+  }
+}
+
+h2 {
+  font-size: $text-3xl;
+
+  @include respond-to($tablet) {
+    font-size: $text-2xl;
+  }
+
+  @include respond-to($mobile) {
+    font-size: $text-xl;
+  }
+}
+
+h3 {
+  font-size: $text-xl;
+
+  @include respond-to($mobile) {
+    font-size: $text-lg;
+  }
+}
+
+h4 {
+  font-size: $text-lg;
+}
+
+h5 {
+  font-size: $text-base;
+}
+
+h6 {
+  font-size: $text-sm;
+}
+
+// ─── Paragraph ───────────────────────────────────────────────
+
+p {
+  font-size: $text-base;
+  line-height: $leading-relaxed;
+  color: $color-text-primary;
+}
+
+// ─── Links ───────────────────────────────────────────────────
+
+a {
+  color: $color-blue;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-blue-dark;
+  }
+}
+
+// ─── Utility classes ─────────────────────────────────────────
+
+.text-xs      { font-size: $text-xs; }
+.text-sm      { font-size: $text-sm; }
+.text-base    { font-size: $text-base; }
+.text-md      { font-size: $text-md; }
+.text-lg      { font-size: $text-lg; }
+.text-xl      { font-size: $text-xl; }
+.text-2xl     { font-size: $text-2xl; }
+.text-3xl     { font-size: $text-3xl; }
+
+.text-primary   { color: $color-text-primary; }
+.text-secondary { color: $color-text-secondary; }
+.text-muted     { color: $color-text-muted; }
+.text-inverted  { color: $color-text-inverted; }
+.text-blue      { color: $color-blue; }
+
+.font-regular   { font-weight: $weight-regular; }
+.font-medium    { font-weight: $weight-medium; }
+.font-semibold  { font-weight: $weight-semibold; }
+.font-bold      { font-weight: $weight-bold; }
+
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+
+.text-uppercase  { text-transform: uppercase; }
+.text-lowercase  { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+.tracking-wide   { letter-spacing: $tracking-wide; }
+.tracking-wider  { letter-spacing: $tracking-wider; }
+
+.leading-tight   { line-height: $leading-tight; }
+.leading-normal  { line-height: $leading-normal; }
+.leading-relaxed { line-height: $leading-relaxed; }
+
+// ─── Section titles (used across pages) ──────────────────────
+
+.section-title {
+  font-size: $text-3xl;
+  font-weight: $weight-bold;
+  color: $color-text-primary;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: $tracking-wide;
+  margin-bottom: $space-20;
+
+  @include respond-to($mobile) {
+    font-size: $text-2xl;
+    margin-bottom: $space-10;
+  }
+}
+
+.section-subtitle {
+  font-size: $text-sm;
+  font-weight: $weight-semibold;
+  color: $color-text-secondary;
+  text-transform: uppercase;
+  letter-spacing: $tracking-wider;
+  text-align: center;
+  margin-bottom: $space-10;
+}
+
+// ─── Badge ───────────────────────────────────────────────────
+
+.badge {
+  display: inline-block;
+  padding: $space-2 $space-6;
+  border: 1px solid $color-blue;
+  color: $color-blue;
+  border-radius: $radius-pill;
+  font-weight: $weight-semibold;
+  font-size: $text-sm;
+}
+
+// ─── Visually hidden (accessibility) ─────────────────────────
+
+.visually-hidden {
+  @include visually-hidden;
+}

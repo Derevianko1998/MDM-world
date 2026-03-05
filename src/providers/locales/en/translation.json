@@ -1,0 +1,111 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "services_list": {
+      "patient_support": "Trade Marketing",
+      "omnichannel": "Omnichannel Marketing",
+      "research": "Marketing Research"
+    },
+    "expertise": "Expertise",
+    "about": "About Us",
+    "blog": "Company Life",
+    "contacts": "Contacts"
+  },
+  "hero": {
+    "title": "Marketing Research & Communications for the Pharma Industry",
+    "description": "MDM is part of Proxima Research International — a global leader in healthcare data and technology. For over 25 years we have provided top pharma players in Ukraine and the CIS with expert insights and analytics.",
+    "cta": "Contact an Expert"
+  },
+  "partners": {
+    "trusted": "Trusted by industry leaders"
+  },
+  "expertise_home": {
+    "title": "Our Core Expertise",
+    "items": {
+      "trade": {
+        "title": "Trade Marketing",
+        "text": "Professional product promotion across pharmacy networks. Inventory analysis, shelf placement control and staff incentive programs."
+      },
+      "research": {
+        "title": "Marketing Research",
+        "text": "In-depth study of the healthcare market. Quantitative and qualitative surveys among doctors, patients and pharmacists for precise decision-making."
+      },
+      "omnichannel": {
+        "title": "Omnichannel Marketing",
+        "text": "Building a unified communications ecosystem. We deliver your message via email, messengers and visits at the most convenient time for your audience."
+      }
+    },
+    "more": "Learn More"
+  },
+  "stats": {
+    "years": "years of experience",
+    "clients": "employees",
+    "projects": "business partners",
+    "countries": "countries covered"
+  },
+  "pharmbase": {
+    "badge": "PHARMBASE",
+    "title": "Data Synergy: The Largest Medical Specialist Database",
+    "description": "We combine data from official sources and our own verification centre to ensure maximum accuracy for your marketing campaigns.",
+    "verified_label": "of specialists have verified mobile numbers",
+    "tabs": {
+      "doctors": "Doctors",
+      "pharmacists": "Pharmacists"
+    },
+    "countries": {
+      "ukraine": "Ukraine",
+      "kazakhstan": "Kazakhstan",
+      "uzbekistan": "Uzbekistan",
+      "poland": "Poland"
+    }
+  },
+  "advantages": {
+    "title": "Our Advantages",
+    "items": {
+      "expertise": {
+        "title": "Expertise",
+        "text": "25 years of experience in marketing research. 95% of our clients are leading pharmaceutical companies."
+      },
+      "quality": {
+        "title": "Database Quality",
+        "text": "The most comprehensive and regularly validated HCP and healthcare facility database in Ukraine."
+      },
+      "compliance": {
+        "title": "Compliance",
+        "text": "Full business transparency and compliance with ESOMAR, GDPR standards and ethical norms."
+      },
+      "contact": {
+        "title": "Effective Reach",
+        "text": "Deep understanding of target audience needs and communication with doctors in their own language."
+      },
+      "service": {
+        "title": "Full Service",
+        "text": "Turnkey project delivery — from strategy to detailed KPI reporting."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "text": "Introducing cutting-edge global technologies and tools into pharmaceutical marketing."
+      }
+    }
+  },
+  "cta_section": {
+    "title": "Ready for Effective Pharma Business Solutions?",
+    "button": "Contact an Expert"
+  },
+  "footer": {
+    "titles": {
+      "sitemap": "SITEMAP",
+      "group": "GROUP OF COMPANIES",
+      "socials": "FOLLOW US",
+      "contacts": "CONTACTS"
+    },
+    "address": "Kyiv, 03040\n13 Vasyl Lypkivsky St.",
+    "phone": "Tel. 044 496 04 30",
+    "fax": "Fax 044 496 04 31",
+    "links": {
+      "morion": "Morion",
+      "proxima": "Proxima Research"
+    }
+  }
+}

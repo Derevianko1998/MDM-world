@@ -1,0 +1,121 @@
+@use '@/styles/variables' as *;
+
+// ─── Article page ─────────────────────────────────────────────
+
+.article {
+  padding: 160px 0 $space-25;
+
+  @include respond-to($mobile) {
+    padding-top: 120px;
+  }
+}
+
+.article__back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: $text-sm;
+  font-weight: $weight-medium;
+  color: $color-text-secondary;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-bottom: $space-8;
+  transition: color $transition-fast;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.article__title {
+  font-size: $text-3xl;
+  font-weight: $weight-bold;
+  color: $color-text-primary;
+  line-height: $leading-tight;
+  margin-bottom: $space-10;
+
+  @include respond-to($mobile) {
+    font-size: $text-xl;
+  }
+}
+
+// ─── Body: image left, content right ─────────────────────────
+// Matches screenshot 2 layout exactly
+
+.article__body {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: $space-15;
+  align-items: start;
+  margin-bottom: $space-8;
+
+  @include respond-to($tablet) {
+    grid-template-columns: 1fr;
+    gap: $space-8;
+  }
+}
+
+.article__cover-col {
+  position: sticky;
+  top: 100px;
+
+  @include respond-to($tablet) {
+    position: static;
+  }
+}
+
+.article__cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: $radius-2xl;
+  display: block;
+
+  @include respond-to($tablet) {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.article__content-col {
+  padding-top: $space-2;
+}
+
+.article__content {
+  font-size: $text-base;
+  line-height: $leading-relaxed;
+  color: $color-text-primary;
+  white-space: pre-line;
+
+  a {
+    color: $color-blue;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: $color-blue-dark;
+    }
+  }
+}
+
+// ─── Meta (date) ─────────────────────────────────────────────
+
+.article__meta {
+  display: block;
+  font-size: $text-sm;
+  color: $color-text-secondary;
+  margin-top: $space-4;
+}
+
+// ─── Not found ───────────────────────────────────────────────
+
+.article-not-found {
+  padding: 160px 0 $space-25;
+
+  h1 {
+    font-size: $text-2xl;
+    margin-bottom: $space-6;
+  }
+}

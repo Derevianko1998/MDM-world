@@ -1,0 +1,123 @@
+@use 'variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+@import './reset.scss';
+@import './typography.scss';
+
+// ─── Body defaults ───────────────────────────────────────────
+
+body {
+  background-color: $color-bg-default;
+  color: $color-text-primary;
+}
+
+// ─── Layout ──────────────────────────────────────────────────
+
+.container {
+  @include container;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex: 1;
+  }
+}
+
+// ─── Spacing utilities ───────────────────────────────────────
+
+.mt-1  { margin-top: $space-1; }
+.mt-2  { margin-top: $space-2; }
+.mt-4  { margin-top: $space-4; }
+.mt-6  { margin-top: $space-6; }
+.mt-8  { margin-top: $space-8; }
+.mt-10 { margin-top: $space-10; }
+
+.mb-1  { margin-bottom: $space-1; }
+.mb-2  { margin-bottom: $space-2; }
+.mb-4  { margin-bottom: $space-4; }
+.mb-6  { margin-bottom: $space-6; }
+.mb-8  { margin-bottom: $space-8; }
+.mb-10 { margin-bottom: $space-10; }
+
+.pt-section { padding-top: $space-25; }
+.pb-section { padding-bottom: $space-25; }
+.py-section {
+  padding-top: $space-25;
+  padding-bottom: $space-25;
+}
+
+// ─── Display utilities ───────────────────────────────────────
+
+.d-flex        { display: flex; }
+.d-grid        { display: grid; }
+.d-block       { display: block; }
+.d-none        { display: none; }
+
+.flex-center   { @include flex-center; }
+.flex-between  { @include flex-between; }
+.flex-col      { @include flex-col; }
+.flex-wrap     { flex-wrap: wrap; }
+.flex-1        { flex: 1; }
+
+// ─── Width ───────────────────────────────────────────────────
+
+.w-full  { width: 100%; }
+.h-full  { height: 100%; }
+
+// ─── Overflow ────────────────────────────────────────────────
+
+.overflow-hidden { overflow: hidden; }
+
+// ─── Position ────────────────────────────────────────────────
+
+.relative { position: relative; }
+.absolute { position: absolute; }
+
+// ─── Pointer events ──────────────────────────────────────────
+
+.pointer-none { pointer-events: none; }
+
+// ─── Transitions ─────────────────────────────────────────────
+
+.transition-base   { transition: $transition-base; }
+.transition-fast   { transition: $transition-fast; }
+.transition-smooth { transition: $transition-smooth; }
+
+// ─── Focus ring (accessibility) ──────────────────────────────
+
+.focus-ring:focus-visible {
+  outline: 2px solid $color-blue;
+  outline-offset: 3px;
+  border-radius: $radius-sm;
+}
+
+// ─── Selection ───────────────────────────────────────────────
+
+::selection {
+  background-color: rgba(0, 114, 188, 0.15);
+  color: $color-text-primary;
+}
+
+// ─── Scrollbar (optional, Webkit) ────────────────────────────
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-blue-light;
+  border-radius: $radius-pill;
+
+  &:hover {
+    background: $color-blue;
+  }
+}

@@ -1,0 +1,221 @@
+
+// ─── Colors: Brand ───────────────────────────────────────────
+
+$color-blue:          #0072bc;
+$color-blue-dark:     #005a96;
+$color-blue-navy:     #0b2e4d;
+$color-blue-light:    #7abce6;
+$color-blue-pale:     #d1e9f6;
+
+// ─── Colors: Neutral ─────────────────────────────────────────
+
+$color-white:         #ffffff;
+$color-gray-100:      #f5f5f7;
+$color-gray-200:      #f0f0f0;
+$color-gray-300:      #ddd;
+$color-gray-400:      #424245;
+$color-gray-500:      #75787b;
+$color-gray-900:      #1d1d1f;
+
+// ─── Colors: Semantic aliases ────────────────────────────────
+
+$color-text-primary:  $color-gray-900;
+$color-text-secondary:$color-gray-500;
+$color-text-muted:    $color-gray-400;
+$color-text-inverted: $color-white;
+
+$color-bg-default:    $color-white;
+$color-bg-subtle:     #fcfcfc;
+$color-bg-wash:       #f8faff;
+$color-bg-footer:     $color-blue-navy;
+
+$color-border-subtle: rgba(0, 114, 188, 0.15);
+$color-border-light:  rgba(0, 114, 188, 0.3);
+$color-border-medium: rgba(0, 114, 188, 0.4);
+$color-border-strong: $color-blue;
+
+// ─── Colors: Glassmorphism ────────────────────────────────────
+
+$glass-bg:            rgba(255, 255, 255, 0.45);
+$glass-bg-hover:      rgba(255, 255, 255, 0.55);
+$glass-border:        rgba(255, 255, 255, 0.5);
+$glass-shadow:        rgba(0, 0, 0, 0.05);
+
+// ─── Colors: Blue tints (overlays / glows) ───────────────────
+
+$blue-glow-sm:        rgba(0, 114, 188, 0.05);
+$blue-glow-md:        rgba(0, 114, 188, 0.1);
+$blue-glow-lg:        rgba(0, 114, 188, 0.2);
+$blue-glow-xl:        rgba(0, 114, 188, 0.3);
+
+// Legacy aliases (для зворотної сумісності)
+$mdm-blue:            $color-blue;
+$mdm-text-dark:       $color-text-primary;
+$mdm-text-gray:       $color-text-secondary;
+$white:               $color-white;
+
+// ─── Typography: Fonts ───────────────────────────────────────
+
+$font-primary:   'Montserrat', sans-serif;
+$font-main:      $font-primary; // legacy alias
+
+// ─── Typography: Scale ───────────────────────────────────────
+//   Назви за роллю, а не розміром — не потрібно міняти всюди
+//   якщо дизайн змінюється.
+
+$text-xs:   12px;
+$text-sm:   14px;
+$text-base: 16px;
+$text-md:   18px;
+$text-lg:   22px;
+$text-xl:   28px;
+$text-2xl:  32px;
+$text-3xl:  36px;
+$text-4xl:  44px;
+$text-5xl:  48px;
+$text-6xl:  64px;
+
+// ─── Typography: Weights ─────────────────────────────────────
+
+$weight-regular:  400;
+$weight-medium:   500;
+$weight-semibold: 600;
+$weight-bold:     700;
+$weight-extrabold:800;
+
+// ─── Typography: Line heights ────────────────────────────────
+
+$leading-tight:  1.2;
+$leading-snug:   1.3;
+$leading-normal: 1.5;
+$leading-relaxed:1.6;
+
+// ─── Typography: Letter spacing ──────────────────────────────
+
+$tracking-normal: 0;
+$tracking-wide:   1px;
+$tracking-wider:  2px;
+
+// ─── Spacing ─────────────────────────────────────────────────
+//   Базова одиниця = 4px
+
+$space-1:   4px;
+$space-2:   8px;
+$space-3:   12px;
+$space-4:   16px;
+$space-5:   20px;
+$space-6:   24px;
+$space-7:   28px;
+$space-8:   32px;
+$space-10:  40px;
+$space-12:  48px;
+$space-15:  60px;
+$space-20:  80px;
+$space-25:  100px;
+$space-30:  120px;
+
+// ─── Border radius ───────────────────────────────────────────
+
+$radius-sm:   8px;
+$radius-md:   12px;
+$radius-lg:   16px;
+$radius-xl:   24px;
+$radius-2xl:  30px;
+$radius-3xl:  40px;
+$radius-pill: 50px;
+
+// ─── Shadows ─────────────────────────────────────────────────
+
+$shadow-sm:   0 4px 15px rgba(0, 114, 188, 0.2);
+$shadow-md:   0 8px 32px rgba(0, 114, 188, 0.1);
+$shadow-lg:   0 15px 35px rgba(0, 114, 188, 0.2);
+$shadow-xl:   0 20px 40px rgba(0, 114, 188, 0.2);
+$shadow-2xl:  0 20px 50px rgba(0, 0, 0, 0.1);
+
+$shadow-card: 0 20px 40px rgba(0, 0, 0, 0.05);
+$shadow-dark: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+// ─── Z-index ─────────────────────────────────────────────────
+
+$z-below:    -1;
+$z-base:      0;
+$z-raised:    1;
+$z-overlay:   2;
+$z-dropdown:  10;
+$z-sticky:    100;
+$z-header:    1000;
+$z-modal:     2000;
+
+// ─── Transitions ─────────────────────────────────────────────
+
+$transition-fast:   all 0.2s ease;
+$transition-base:   all 0.3s ease;
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+// ─── Breakpoints ─────────────────────────────────────────────
+
+$desktop-xl: 1440px;
+$desktop:    1200px;
+$tablet:     1024px;
+$mobile:     768px;
+$mobile-sm:  480px;
+
+// ─── Layout ──────────────────────────────────────────────────
+
+$container-max:     1200px;
+$container-padding: 20px;
+
+$header-height:     72px;
+
+// ─── Mixins ──────────────────────────────────────────────────
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+@mixin section-padding {
+  padding: $space-25 0;
+}
+
+@mixin respond-to($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

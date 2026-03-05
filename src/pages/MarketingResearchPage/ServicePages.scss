@@ -1,0 +1,414 @@
+// ─────────────────────────────────────────────────────────────
+// SERVICE PAGES — Shared + Per-page styles
+// TradeMarketingPage, MarketingResearchPage, OmnichannelMarketingPage
+// ─────────────────────────────────────────────────────────────
+@use '@/styles/variables' as *;
+
+// ─── Shared: service-hero ────────────────────────────────────
+
+.service-hero {
+  padding: 160px 0 100px;
+  background: linear-gradient(135deg, $color-bg-default 55%, $color-blue-pale 100%);
+  overflow: hidden;
+
+  @include respond-to($mobile) {
+    padding: 120px 0 60px;
+  }
+}
+
+.service-hero__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-15;
+  align-items: center;
+
+  @include respond-to($tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-hero__title {
+  font-size: $text-4xl;
+  font-weight: $weight-bold;
+  color: $color-text-primary;
+  margin: $space-4 0 $space-6;
+  line-height: $leading-tight;
+
+  @include respond-to($mobile) {
+    font-size: $text-2xl;
+  }
+}
+
+.service-hero__description {
+  font-size: $text-md;
+  color: $color-text-secondary;
+  line-height: $leading-relaxed;
+  margin-bottom: $space-8;
+  max-width: 560px;
+}
+
+.service-hero__image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: $radius-3xl;
+  box-shadow: $shadow-2xl;
+
+  @include respond-to($tablet) {
+    height: 280px;
+  }
+}
+
+// ─── Shared: service-cta ─────────────────────────────────────
+
+.service-cta {
+  padding: $space-25 0;
+  background: $color-bg-default;
+}
+
+.service-cta__box {
+  background: $color-blue;
+  border-radius: $radius-3xl;
+  padding: $space-15 $space-12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-8;
+  box-shadow: $shadow-xl;
+
+  h2 {
+    font-size: $text-2xl;
+    font-weight: $weight-bold;
+    color: $color-white;
+    line-height: $leading-tight;
+    max-width: 500px;
+    text-transform: uppercase;
+  }
+
+  .btn--ghost {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  @include respond-to($tablet) {
+    flex-direction: column;
+    text-align: center;
+    padding: $space-10;
+
+    h2 { max-width: 100%; }
+  }
+}
+
+// ─── Trade Marketing ─────────────────────────────────────────
+
+.trade__services {
+  padding: $space-25 0;
+  background: $color-bg-default;
+}
+
+.trade__services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-6;
+
+  @include respond-to($tablet) { grid-template-columns: repeat(2, 1fr); }
+  @include respond-to($mobile) { grid-template-columns: 1fr; }
+}
+
+.trade__service-card {
+  padding: $space-8;
+  border-radius: $radius-2xl;
+  border: 1px solid $color-border-subtle;
+  background: $color-bg-default;
+  transition: $transition-base;
+  height: 100%;
+
+  &:hover {
+    border-color: $color-border-strong;
+    box-shadow: $shadow-md;
+    transform: translateY(-4px);
+  }
+
+  h3 {
+    font-size: $text-base;
+    font-weight: $weight-bold;
+    margin: $space-4 0 $space-2;
+    color: $color-text-primary;
+  }
+
+  p {
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    line-height: $leading-relaxed;
+  }
+}
+
+.trade__service-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 114, 188, 0.1);
+  border-radius: $radius-md;
+  @include flex-center;
+  color: $color-blue;
+}
+
+.trade__process {
+  padding: $space-25 0;
+  background: $color-bg-subtle;
+}
+
+.trade__steps {
+  margin-top: $space-10;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  list-style: none;
+  counter-reset: steps;
+}
+
+.trade__step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: $space-6;
+  align-items: start;
+  padding: $space-6;
+  border-radius: $radius-2xl;
+  background: $color-bg-default;
+  border: 1px solid $color-border-subtle;
+  transition: $transition-base;
+
+  &:hover {
+    border-color: $color-border-light;
+    box-shadow: $shadow-card;
+  }
+
+  @include respond-to($mobile) {
+    grid-template-columns: 50px 1fr;
+    gap: $space-4;
+  }
+}
+
+.trade__step-number {
+  font-size: $text-3xl;
+  font-weight: $weight-extrabold;
+  color: $color-border-light;
+  line-height: 1;
+}
+
+.trade__step-content {
+  h3 {
+    font-size: $text-base;
+    font-weight: $weight-bold;
+    margin-bottom: $space-2;
+    color: $color-text-primary;
+  }
+
+  p {
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    line-height: $leading-relaxed;
+  }
+}
+
+// ─── Marketing Research ──────────────────────────────────────
+
+.research__methods {
+  padding: $space-25 0;
+  background: $color-bg-default;
+}
+
+.research__methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-6;
+
+  @include respond-to($tablet) { grid-template-columns: repeat(2, 1fr); }
+  @include respond-to($mobile) { grid-template-columns: 1fr; }
+}
+
+.research__method-card {
+  padding: $space-8;
+  border-radius: $radius-2xl;
+  border: 1px solid $color-border-subtle;
+  background: $color-bg-default;
+  transition: $transition-base;
+  height: 100%;
+
+  &:hover {
+    border-color: $color-border-strong;
+    box-shadow: $shadow-md;
+    transform: translateY(-4px);
+  }
+
+  h3 {
+    font-size: $text-base;
+    font-weight: $weight-bold;
+    margin: $space-4 0 $space-2;
+    color: $color-text-primary;
+  }
+
+  p {
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    line-height: $leading-relaxed;
+  }
+}
+
+.research__method-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 114, 188, 0.1);
+  border-radius: $radius-md;
+  @include flex-center;
+  color: $color-blue;
+}
+
+.research__audiences {
+  padding: $space-25 0;
+  background: $color-bg-subtle;
+}
+
+.research__audiences-subtitle {
+  text-align: center;
+  font-size: $text-base;
+  color: $color-text-secondary;
+  margin-top: -$space-8;
+  margin-bottom: $space-10;
+}
+
+.research__audiences-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-6;
+
+  @include respond-to($mobile) { grid-template-columns: 1fr; }
+}
+
+.research__audience-card {
+  padding: $space-8 $space-10;
+  border-radius: $radius-2xl;
+  background: $color-bg-default;
+  border-left: 4px solid $color-blue;
+  box-shadow: $shadow-card;
+  transition: $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-3px);
+  }
+
+  h3 {
+    font-size: $text-lg;
+    font-weight: $weight-bold;
+    margin-bottom: $space-3;
+    color: $color-text-primary;
+  }
+
+  p {
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    line-height: $leading-relaxed;
+  }
+}
+
+// ─── Omnichannel Marketing ───────────────────────────────────
+
+.omni__channels {
+  padding: $space-25 0;
+  background: $color-bg-default;
+}
+
+.omni__channels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $space-6;
+
+  @include respond-to($tablet) { grid-template-columns: repeat(2, 1fr); }
+  @include respond-to($mobile) { grid-template-columns: 1fr; }
+}
+
+.omni__channel-card {
+  padding: $space-8;
+  border-radius: $radius-2xl;
+  border: 1px solid $color-border-subtle;
+  background: $color-bg-default;
+  transition: $transition-base;
+  height: 100%;
+
+  &:hover {
+    border-color: $color-border-strong;
+    box-shadow: $shadow-md;
+    transform: translateY(-4px);
+  }
+
+  h3 {
+    font-size: $text-base;
+    font-weight: $weight-bold;
+    margin: $space-4 0 $space-2;
+    color: $color-text-primary;
+  }
+
+  p {
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    line-height: $leading-relaxed;
+  }
+}
+
+.omni__channel-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 114, 188, 0.1);
+  border-radius: $radius-md;
+  @include flex-center;
+  color: $color-blue;
+}
+
+.omni__benefits {
+  padding: $space-25 0;
+  background: $color-bg-subtle;
+}
+
+.omni__benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-6;
+
+  @include respond-to($mobile) { grid-template-columns: 1fr; }
+}
+
+.omni__benefit-card {
+  padding: $space-10;
+  border-radius: $radius-2xl;
+  background: $color-bg-default;
+  border: 1px solid $color-border-subtle;
+  box-shadow: $shadow-card;
+  transition: $transition-base;
+
+  &:hover {
+    border-color: $color-border-light;
+    box-shadow: $shadow-md;
+    transform: translateY(-3px);
+  }
+
+  h3 {
+    font-size: $text-lg;
+    font-weight: $weight-bold;
+    margin-bottom: $space-3;
+    color: $color-text-primary;
+  }
+
+  p {
+    font-size: $text-sm;
+    color: $color-text-secondary;
+    line-height: $leading-relaxed;
+  }
+}
+
+.omni__benefit-number {
+  font-size: $text-5xl;
+  font-weight: $weight-extrabold;
+  color: $color-border-light;
+  line-height: 1;
+  margin-bottom: $space-4;
+}

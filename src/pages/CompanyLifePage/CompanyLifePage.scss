@@ -1,0 +1,152 @@
+@use '@/styles/variables' as *;
+
+// ─── Page Layout ─────────────────────────────────────────────
+
+.company-life {
+  padding: 160px 0 $space-25;
+
+  @include respond-to($mobile) {
+    padding-top: 120px;
+  }
+}
+
+.company-life__header {
+  margin-bottom: $space-12;
+}
+
+.company-life__title {
+  font-size: $text-4xl;
+  font-weight: $weight-bold;
+  color: $color-text-primary;
+  margin-bottom: $space-8;
+
+  @include respond-to($mobile) {
+    font-size: $text-2xl;
+  }
+}
+
+// ─── Category Filters ────────────────────────────────────────
+
+.company-life__filters {
+  display: flex;
+  gap: $space-2;
+  flex-wrap: wrap;
+}
+
+.company-life__filter-btn {
+  padding: $space-2 $space-5;
+  border-radius: $radius-pill;
+  border: 1px solid $color-border-subtle;
+  background: transparent;
+  font-size: $text-sm;
+  font-weight: $weight-medium;
+  color: $color-text-secondary;
+  cursor: pointer;
+  transition: $transition-fast;
+
+  &:hover {
+    border-color: $color-blue;
+    color: $color-blue;
+  }
+
+  &.company-life__filter-btn--active {
+    background: $color-blue;
+    border-color: $color-blue;
+    color: $color-white;
+  }
+}
+
+// ─── Articles List ────────────────────────────────────────────
+
+.company-life__list {
+  display: flex;
+  flex-direction: column;
+}
+
+// ─── Article Card ─────────────────────────────────────────────
+// Matches screenshot: thumbnail left ~200px, content right, divider bottom
+
+.article-card {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: $space-8;
+  padding: $space-8 0;
+  border-bottom: 1px solid $color-gray-200;
+  transition: $transition-fast;
+
+  &:first-child {
+    border-top: 1px solid $color-gray-200;
+  }
+
+  &:hover .article-card__title {
+    color: $color-blue;
+  }
+
+  @include respond-to($mobile) {
+    grid-template-columns: 1fr;
+    gap: $space-4;
+  }
+}
+
+.article-card__cover-link {
+  display: block;
+  flex-shrink: 0;
+  border-radius: $radius-lg;
+  overflow: hidden;
+}
+
+.article-card__cover {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: $radius-lg;
+  display: block;
+  transition: transform 0.4s ease;
+
+  .article-card:hover & {
+    transform: scale(1.03);
+  }
+
+  @include respond-to($mobile) {
+    height: 200px;
+  }
+}
+
+.article-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $space-2;
+  padding: $space-2 0;
+}
+
+.article-card__title-link {
+  text-decoration: none;
+}
+
+.article-card__title {
+  font-size: $text-lg;
+  font-weight: $weight-bold;
+  color: $color-text-primary;
+  line-height: $leading-snug;
+  transition: color $transition-fast;
+  margin: 0;
+}
+
+.article-card__excerpt {
+  font-size: $text-sm;
+  color: $color-text-secondary;
+  line-height: $leading-normal;
+  margin: 0;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-card__date {
+  font-size: $text-sm;
+  color: $color-text-secondary;
+  margin-top: $space-1;
+}
